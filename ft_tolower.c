@@ -3,14 +3,14 @@
 /*                                                        ::::::::            */
 /*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: dkrecisz <marvin@codam.nl>                   +#+                     */
+/*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 16:56:23 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/28 17:56:09 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2019/10/30 19:23:58 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
 int		ft_tolower(int c)
 {

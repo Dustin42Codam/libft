@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isdigit.c                                       :+:    :+:            */
+/*   ft_strlen.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 15:21:27 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/30 17:21:59 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/10/30 13:39:06 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/02 15:47:48 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+int	ft_strlen(const char *s)
 {
-	if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	int i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

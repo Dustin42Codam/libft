@@ -5,16 +5,17 @@
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 14:52:17 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/29 15:18:14 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/01 11:43:42 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/01 12:21:39 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\v'  || c == '\f' || c == '\r'  || c == ' ' )
+	if (c == '\t' || c == '\n' || c == '\v' ||
+			c == '\f' || c == '\r' || c == ' ')
 		return (1);
 	return (0);
 }

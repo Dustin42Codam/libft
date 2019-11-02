@@ -3,14 +3,14 @@
 /*                                                        ::::::::            */
 /*   ft_isascii.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: dkrecisz <marvin@codam.nl>                   +#+                     */
+/*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 11:11:06 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/29 11:17:18 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/10/30 16:02:53 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/10/30 17:21:45 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
