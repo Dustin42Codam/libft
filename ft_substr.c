@@ -1,18 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isascii.c                                       :+:    :+:            */
+/*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/30 16:02:53 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/30 17:21:45 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/05 18:51:44 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/18 19:46:35 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	char	*str;
+
+	if (s == NULL)
+		return (NULL);
+	if (ft_strlen(s) < len)
+		len = ft_strlen(s);
+	if (ft_strlen(s) <= start)
+		return (ft_strdup(""));
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, s + start, len + 1);
+	return (str);
 }

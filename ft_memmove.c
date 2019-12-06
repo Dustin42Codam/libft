@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isascii.c                                       :+:    :+:            */
+/*   ft_memmove.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/30 16:02:53 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/30 17:21:45 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/04 11:35:41 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/21 00:31:15 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	return (ft_memcpy(dst, src, len));
 }

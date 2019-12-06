@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isascii.c                                       :+:    :+:            */
+/*   ft_strjoin.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/30 16:02:53 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/30 17:21:45 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/05 17:00:27 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/06 13:19:30 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	size_t	max;
+	char	*str;
+
+	if (s1 == NULL || s2 == NULL)
+		return (NULL);
+	max = ft_strlen(s1) + ft_strlen(s2);
+	str = (char *)malloc((max + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, s1, ft_strlen(s1) + 1);
+	ft_strlcat(str, s2, max + 1);
+	return (str);
 }

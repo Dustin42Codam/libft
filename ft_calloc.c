@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isupper.c                                       :+:    :+:            */
+/*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: dkrecisz <marvin@codam.nl>                   +#+                     */
+/*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 12:48:13 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/29 12:50:09 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/04 16:54:34 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/21 00:23:15 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
-static	int isupper(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+	void	*ptr;
+
+	ptr = (void *)malloc(size * count);
+	if (ptr == NULL)
+		return (NULL);
+	ft_bzero(ptr, count * size);
+	return (ptr);
 }

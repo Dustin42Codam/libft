@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:24:49 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/11/01 15:20:45 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2019/11/19 18:01:10 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ static int	ft_isspace(char c)
 
 int			ft_atoi(const char *str)
 {
-	int	i;
-	int nb;
-	int sign;
+	int				i;
+	unsigned long	nb;
+	int				sign;
 
 	i = 0;
 	sign = 1;
@@ -40,5 +40,9 @@ int			ft_atoi(const char *str)
 		nb = nb * 10 + (str[i] - 48);
 		i++;
 	}
+	if (sign == 1 && nb >= 9223372036854775807)
+		return (-1);
+	else if (sign == -1 && nb > 9223372036854775807)
+		return (0);
 	return (nb * sign);
 }

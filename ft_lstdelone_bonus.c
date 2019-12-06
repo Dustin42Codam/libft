@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isloweri.c                                      :+:    :+:            */
+/*   ft_lstdelone_bonus.c                               :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: dkrecisz <marvin@codam.nl>                   +#+                     */
+/*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 12:51:12 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/29 12:52:34 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/13 12:26:15 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/29 18:21:08 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "libft.h"
 
-static int	ft_islower(int c)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
-	return (0);
+	if (lst == NULL)
+		return ;
+	(*del)(lst->content);
+	free(lst);
 }

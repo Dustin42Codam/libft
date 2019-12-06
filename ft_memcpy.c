@@ -1,18 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalnum.c                                       :+:    :+:            */
+/*   ft_memcpy.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 15:36:51 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/10/30 17:20:54 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/11/02 20:00:29 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2019/11/21 01:11:03 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	return (ft_isalpha(c) || ft_isdigit(c));
+	size_t				i;
+	unsigned char		*dptr;
+	unsigned const char	*sptr;
+
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	dptr = (unsigned char *)dst;
+	sptr = (unsigned const char *)src;
+	i = 0;
+	if (dst < src)
+	{
+		while (i < n)
+		{
+			dptr[i] = sptr[i];
+			i++;
+		}
+	}
+	else
+		while (n)
+		{
+			n--;
+			dptr[n] = sptr[n];
+		}
+	return (dst);
 }
