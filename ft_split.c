@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 20:40:30 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/12/06 21:19:34 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2019/12/09 14:01:03 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,8 @@ static char		**ft_write_str(char *str, char **ret, char c, size_t words)
 	while (str[i] && x < words)
 	{
 		j = 0;
+		while (str[i] && str[i] == c)
+			i++;
 		while (str[i + j] != c && str[i + j] != '\0')
 			j++;
 		ret[x] = ft_substr(str, i, j);
@@ -73,27 +75,15 @@ static char		**ft_write_str(char *str, char **ret, char c, size_t words)
 char			**ft_split(char const *s, char c)
 {
 	char	**ret;
-	char	*str;
-	char	*trimc;
 	size_t	words;
 
 	if (s == NULL)
 		return (NULL);
-	trimc = (char *)malloc(2 * sizeof(char));
-	if (trimc == NULL)
-		return (NULL);
-	trimc[0] = c;
-	trimc[1] = '\0';
-	str = ft_strtrim(s, trimc);
-	free(trimc);
-	if (str == NULL)
-		return (NULL);
-	words = count_words(str, c);
+	words = count_words(s, c);
 	ret = (char **)malloc((words + 1) * sizeof(char *));
 	if (ret == NULL)
 		return (NULL);
-	ret = ft_write_str(str, ret, c, words);
-	free(str);
+	ret = ft_write_str((char *)s, ret, c, words);
 	if (ret == NULL)
 		return (NULL);
 	return (ret);
