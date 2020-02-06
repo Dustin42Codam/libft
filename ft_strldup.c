@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   ft_strldup.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/11/04 17:32:57 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/06 19:22:51 by dkrecisz      ########   odam.nl         */
+/*   Created: 2020/02/06 19:23:32 by dkrecisz       #+#    #+#                */
+/*   Updated: 2020/02/06 19:28:05 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strldup(const char *s1, int len)
 {
 	char *dup;
 
-	dup = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
+	dup = (char *)malloc((len + 1) * sizeof(char));
 	if (dup == NULL)
 		return (NULL);
-	ft_strlcpy(dup, s1, ft_strlen(s1) + 1);
+	ft_strlcpy(dup, s1, len + 1);
 	return (dup);
 }

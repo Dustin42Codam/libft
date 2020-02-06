@@ -5,8 +5,8 @@
 #                                                      +:+                     #
 #    By: dkrecisz <dkrecisz@student.codam.n>          +#+                      #
 #                                                    +#+                       #
-#    Created: 2019/11/15 19:33:12 by dkrecisz      #+#    #+#                  #
-#    Updated: 2019/12/06 15:50:49 by dkrecisz      ########   odam.nl          #
+#    Created: 2019/11/15 19:33:12 by dkrecisz       #+#    #+#                 #
+#    Updated: 2020/02/06 19:26:47 by dkrecisz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ SRC = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalpha.c \
 	  ft_bzero.c ft_memset.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	  ft_memcmp.c ft_memchr.c ft_calloc.c ft_strdup.c ft_putchar_fd.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strjoin.c \
-	  ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c
+	  ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
+	  ft_strldup.c
 
 BSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
@@ -27,23 +28,23 @@ BSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 OBJ = $(SRC:.c=.o)
 BONUSOBJ = $(BSRC:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror# -fsanitize=address -g
+CFLAGS = -Wall -Wextra -Werror
 
 .PHONY: all clean fclean re bonus
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	gcc $(CFLAGS) -c $(SRC)
-	ar rcs $(NAME) $(OBJ)
+	@gcc $(CFLAGS) -c $(SRC)
+	@ar rcs $(NAME) $(OBJ)
 
 bonus: $(NAME) | $(BONUSOBJ)
-	ar rcs $(NAME) $|
+	@ar rcs $(NAME) $|
 
 clean:
-	rm -f $(OBJ) $(BONUSOBJ)
+	@rm -f $(OBJ) $(BONUSOBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
