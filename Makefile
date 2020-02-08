@@ -6,7 +6,7 @@
 #    By: dkrecisz <dkrecisz@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/11/15 19:33:12 by dkrecisz       #+#    #+#                 #
-#    Updated: 2020/02/06 19:26:47 by dkrecisz      ########   odam.nl          #
+#    Updated: 2020/02/08 11:35:12 by dkrecisz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalpha.c \
 	  ft_memcmp.c ft_memchr.c ft_calloc.c ft_strdup.c ft_putchar_fd.c \
 	  ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strjoin.c \
 	  ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
-	  ft_strldup.c
+	  ft_strldup.c ft_utoa.c
 
 BSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
