@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*    libft.h                                           :+:    :+:            */
+/*   libft.h                                            :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/02/08 12:05:42 by dkrecisz      ########   odam.nl         */
+/*   Created: 2019/10/29 13:10:15 by dkrecisz       #+#    #+#                */
+/*   Updated: 2020/02/09 07:06:35 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_atoi(const char *str);
+int				ft_atoi_base(const char *str, int base);
 size_t			ft_strlen(const char *s);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack, \
@@ -58,6 +59,9 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_utoa(unsigned int n);
+char			*ft_itoa_base(int n, int base);
+char			*ft_utoa_base(unsigned int n, int base);
+char			*ft_ultoa_base(unsigned long n, int base);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **alst, t_list *new);
