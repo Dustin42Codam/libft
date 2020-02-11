@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/08 14:36:07 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/08 14:40:35 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/02/10 19:24:48 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	nbr_inbase(char c, int base)
 	(c >= 'a' && c <= ('a' + base - 10)));
 }
 
-int		ft_atoi_base(const char *str, int base)
+int			ft_atoi_base(const char *str, int base)
 {
 	int		i;
 	int		nbr;

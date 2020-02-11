@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_ultoa_base.c                                    :+:    :+:            */
+/*   ft_ltoa_base.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/02/09 06:55:28 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/10 19:41:42 by dkrecisz      ########   odam.nl         */
+/*   Created: 2020/02/10 18:29:59 by dkrecisz       #+#    #+#                */
+/*   Updated: 2020/02/10 19:44:43 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	get_len(unsigned long n, int base)
+static int	get_len(long n, int base)
 {
 	int i;
 
@@ -25,24 +25,29 @@ static int	get_len(unsigned long n, int base)
 	return (i);
 }
 
-char	*ft_ultoa_base(unsigned long value, int base)
+char		*ft_ltoa_base(long value, int base)
 {
-	unsigned long	n;
-	char			*s;
-	int				i;
+	char	*s;
+	long	n;
+	int		sign;
+	int		i;
 
 	i = 0;
 	s = NULL;
-	n = value;
+	n = (value < 0) ? -(long)value : value;
 	i += get_len(n, base);
+	sign = (value < 0 && base == 10) ? -1 : 0;
+	i = (sign == -1) ? 2 : 1;
 	if (!(ft_malloc_wrap(s, i + 1)))
 		return (NULL);
 	s[i] = '\0';
-	while (i >= 0)
+	n = (value < 0) ? -(long)value : value;
+	while (i + sign)
 	{
-		i--;
-		s[i] = (n % base < 10) ? n % base + '0' : n % base + 'a' - 10;
+		s[i] = (n % base < 10) ? n % base + '0' : n % base + 'A' - 10;
 		n /= base;
+		i--;
 	}
+	(i == 0) ? s[i] = '-' : 0;
 	return (s);
 }

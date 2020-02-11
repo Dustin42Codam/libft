@@ -1,52 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_itoa_base.c                                     :+:    :+:            */
+/*   ft_ultoa_base_low.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/09 06:55:28 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/11 15:38:48 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/02/10 19:41:31 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*init_string(int base, int i, int sign, long n)
+static int	get_len(unsigned long n, int base)
 {
-	char	*str;
+	int i;
 
-	str = (char *)malloc(sizeof(char) * i + 1);
-	if (str == NULL)
-		return (NULL);
-	while (i)
-	{
-		i--;
-		if (sign == -1 && i == 0)
-		{
-			str[0] = '-';
-			return (str);
-		}
-		str[i] = (n % base < 10) ? n % base + '0' : n % base + 'A' - 10;
-		n /= base;
-	}
-	return (str);
-}
-
-char		*ft_itoa_base(int value, int base)
-{
-	int		i;
-	int		sign;
-	long	n;
-
-	sign = (value < 0) ? -1 : 1;
-	n = (value < 0) ? -(long)value : value;
-	i = (sign == -1 || value == 0) ? 1 : 0;
-	while (n)
+	i = 0;
+	while (n >= 1)
 	{
 		n /= base;
 		i++;
 	}
-	n = (value < 0) ? -(long)value : value;
-	return (init_string(base, i, sign, n));
+	return (i);
+}
+
+
+char	*ft_ultoa_base_low(unsigned long value, int base)
+{
+	unsigned long	n;
+	char			*s;
+	int				i;
+
+	i = 0;
+	s = NULL;
+	n = value;
+	i += get_len(n, base);
+	s = (char*)malloc(sizeof(char) * i + 1);
+	if (s == NULL)
+		return (NULL);
+	s[i] = '\0';
+	while (i >= 0)
+	{
+		i--;
+		s[i] = (n % base < 10) ? n % base + '0' : n % base + 'a' - 10;
+		n /= base;
+	}
+	return (s);
 }

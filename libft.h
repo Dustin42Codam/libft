@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/09 07:06:35 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/02/10 19:26:46 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,12 @@ char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			**ft_split(char const *s, char c);
 char			*ft_itoa(int n);
 char			*ft_utoa(unsigned int n);
-char			*ft_itoa_base(int n, int base);
+char			*ft_itoa_base(int value, int base);
 char			*ft_utoa_base(unsigned int n, int base);
-char			*ft_ultoa_base(unsigned long n, int base);
+char			*ft_ultoa_base(unsigned long value, int base);
+char			*ft_ultoa_base_low(unsigned long value, int base);
+char			*ft_ltoa_base(long value, int base);
+void			*ft_malloc_wrap(void *dest, size_t len);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **alst, t_list *new);
