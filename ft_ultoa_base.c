@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/02/09 06:55:28 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/10 19:41:42 by dkrecisz      ########   odam.nl         */
+/*   Created: 2020/02/09 06:55:28 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2020/06/05 21:04:19 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static int	get_len(unsigned long n, int base)
 	return (i);
 }
 
-char	*ft_ultoa_base(unsigned long value, int base)
+char		*ft_ultoa_base(unsigned long value, int base)
 {
 	unsigned long	n;
 	char			*s;

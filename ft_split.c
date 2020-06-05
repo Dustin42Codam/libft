@@ -6,85 +6,80 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 20:40:30 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/12/09 14:01:03 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/06/05 21:00:54 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-static size_t	count_words(char const *s, char c)
+static size_t	ft_arr_size(char const *s, char c)
 {
-	int	count;
-	int	i;
-	
-	i = 0;
-	count = 0;
-	while (s[i] && s[i] == c)
-		i++;
-	while (s[i])
+	size_t size;
+
+	size = 0;
+	while (*s)
 	{
-		while (s[i] && s[i] != c)
-			i++;
-		count++;
-		while (s[i] && s[i] == c)
-			i++;
+		if (*s != c && (*(s + 1) == c || *(s + 1) == '\0'))
+			size++;
+		s++;
 	}
-	return (count);
+	return (size);
 }
 
-static void		ft_free(char **ret, size_t x)
+static size_t	ft_split_size(char const *s, char c)
 {
-	while (x)
-	{
-		x--;
-		free(ret[x]);
-	}
-	free(ret);
+	char	*delim;
+
+	delim = ft_strchr(s, c);
+	if (delim == NULL)
+		delim = (char *)s + ft_strlen(s);
+	return (delim - s);
 }
 
-static char		**ft_write_str(char *str, char **ret, char c, size_t words)
+static void		ft_free_arr(char **arr)
 {
 	size_t	i;
-	size_t	j;
-	size_t	x;
 
 	i = 0;
-	x = 0;
-	while (str[i] && x < words)
+	while (arr[i])
 	{
-		j = 0;
-		while (str[i] && str[i] == c)
-			i++;
-		while (str[i + j] != c && str[i + j] != '\0')
-			j++;
-		ret[x] = ft_substr(str, i, j);
-		if (ret[x] == NULL)
-		{
-			ft_free(ret, x);
-			return (NULL);
-		}
-		x++;
-		i += j;
-		while (str[i] == c)
-			i++;
+		free(arr[i]);
+		i++;
 	}
-	ret[words] = NULL;
-	return (ret);
+	free(arr);
+}
+
+static int		ft_split_str(char **arr, const char *s, char c)
+{
+	size_t	split_size;
+
+	if (*s == '\0')
+	{
+		*arr = NULL;
+		return (0);
+	}
+	if (*s == c)
+		return (ft_split_str(arr, s + 1, c));
+	split_size = ft_split_size(s, c);
+	*arr = ft_substr(s, 0, split_size);
+	if (*arr == NULL)
+		return (1);
+	return (ft_split_str(arr + 1, s + split_size, c));
 }
 
 char			**ft_split(char const *s, char c)
 {
-	char	**ret;
-	size_t	words;
+	char		**arr;
+	size_t		size;
 
 	if (s == NULL)
 		return (NULL);
-	words = count_words(s, c);
-	ret = (char **)malloc((words + 1) * sizeof(char *));
-	if (ret == NULL)
+	size = ft_arr_size(s, c);
+	arr = (char **)malloc(sizeof(char *) * (size + 1));
+	if (arr == NULL)
 		return (NULL);
-	ret = ft_write_str((char *)s, ret, c, words);
-	if (ret == NULL)
-		return (NULL);
-	return (ret);
+	if (ft_split_str(arr, s, c) == 1)
+		ft_free_arr(arr);
+	return (arr);
 }

@@ -5,15 +5,15 @@
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/02/10 18:46:05 by dkrecisz       #+#    #+#                */
-/*   Updated: 2020/02/10 18:46:30 by dkrecisz      ########   odam.nl         */
+/*   Created: 2020/02/10 18:46:05 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2020/06/05 21:06:27 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    *ft_malloc_wrap(void *dest, size_t len)
+void	*ft_malloc_wrap(void *dest, size_t len)
 {
-        dest = malloc(len);
-        return (dest);
+	dest = malloc(len);
+	return (dest);
 }
