@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/06/05 20:58:32 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/06/09 08:23:15 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int				ft_isalnum(int c);
 int				ft_atoi(const char *str);
 int				ft_atoi_base(const char *str, int base);
 size_t			ft_strlen(const char *s);
+int				ft_numlen(long n);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *haystack, \
 				const char *needle, size_t len);
