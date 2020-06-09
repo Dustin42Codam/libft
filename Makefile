@@ -30,7 +30,7 @@ SRC = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalpha.c \
 	  ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 	  ft_strldup.c ft_utoa.c ft_putnbr_unsigned_fd.c ft_atoi_base.c \
 	  ft_itoa_base.c ft_utoa_base.c ft_ultoa_base.c ft_ltoa_base.c \
-	  ft_ultoa_base_low.c ft_malloc_wrap.c 
+	  ft_ultoa_base_low.c ft_malloc_wrap.c ft_numlen.c 
 
 BSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
