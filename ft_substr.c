@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 18:51:44 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/05/04 14:18:10 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./include/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 14:24:33 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/11/21 01:05:43 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./include/libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

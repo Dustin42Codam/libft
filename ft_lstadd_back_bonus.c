@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 22:29:06 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/11/13 14:19:20 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./include/libft.h"
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {

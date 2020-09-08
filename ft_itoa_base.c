@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.n>          +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/09 06:55:28 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/06/05 20:58:08 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "./include/libft.h"
 
 static char	*init_string(int base, int i, int sign, long n)
 {
