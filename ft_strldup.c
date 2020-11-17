@@ -6,13 +6,13 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/06 19:23:32 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2020/11/17 06:14:18 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libft.h"
 
-char	*ft_strldup(const char *s1, int len)
+char	*ft_strldup(const char *s1, size_t len)
 {
 	char *dup;
 

@@ -6,7 +6,7 @@
 #    By: dkrecisz <dkrecisz@student.codam.n>          +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/11/15 19:33:12 by dkrecisz      #+#    #+#                  #
-#    Updated: 2020/09/08 20:34:21 by dkrecisz      ########   odam.nl          #
+#    Updated: 2020/11/17 06:16:46 by dkrecisz      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,14 +42,12 @@ $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
 
 $(OBJ): $(ODIR)/%.o: %.c
-	@echo Compiling $<
 	@mkdir -p $(ODIR)
-	@gcc $(CFLAGS) -c $< -o $@
+	gcc $(CFLAGS) -c $< -o $@
 
 $(BOBJ): $(ODIR)/%.o: %.c
-	@echo Compiling $<
 	@mkdir -p $(ODIR)
-	@gcc $(CFLAGS) -c $< -o $@
+	gcc $(CFLAGS) -c $< -o $@
 
 bonus: $(NAME) | $(BOBJ)
 	@ar rcs $(NAME) $|
