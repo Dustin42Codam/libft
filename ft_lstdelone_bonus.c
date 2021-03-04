@@ -6,11 +6,12 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/13 12:26:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/11/09 23:03:49 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:39:10 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libft.h"
+#include <stdlib.h>
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
