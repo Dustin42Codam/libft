@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 16:46:59 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/04 14:00:53 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:31:10 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include <stdlib.h>
 
 static int	calc_size(unsigned int n)
 {

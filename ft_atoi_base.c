@@ -6,19 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/08 14:36:07 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/04 14:11:06 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:28:00 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libft.h"
-
-static int	ft_isspace(char c)
-{
-	if (c == '\t' || c == '\n' || c == '\v' || \
-			c == '\f' || c == '\r' || c == ' ')
-		return (1);
-	return (0);
-}
 
 static int	nbr_inbase(char c, int base)
 {
