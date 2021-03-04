@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/11/17 06:14:38 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 13:58:07 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

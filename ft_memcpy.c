@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/02 20:00:29 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:07:15 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 			dptr[i] = sptr[i];
 			i++;
 		}
+		return (dst);
 	}
-	else
-		while (n)
-		{
-			n--;
-			dptr[n] = sptr[n];
-		}
+	while (n)
+	{
+		n--;
+		dptr[n] = sptr[n];
+	}
 	return (dst);
 }

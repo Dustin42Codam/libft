@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 17:32:57 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/11/17 06:16:33 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:03:30 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	
-	char *dup;
+	char	*dup;
 
 	dup = (char *)malloc((ft_strlen(s1) + 1) * sizeof(char));
 	if (dup == NULL)

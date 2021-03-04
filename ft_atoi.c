@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:24:49 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:11:49 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 static int	ft_isspace(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\v' ||
+	if (c == '\t' || c == '\n' || c == '\v' || \
 			c == '\f' || c == '\r' || c == ' ')
 		return (1);
 	return (0);
 }
 
-int			ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int				i;
 	unsigned long	nb;

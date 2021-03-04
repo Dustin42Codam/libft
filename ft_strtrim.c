@@ -6,13 +6,13 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/11 15:36:17 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:02:31 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./include/libft.h"
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
 	size_t	start;

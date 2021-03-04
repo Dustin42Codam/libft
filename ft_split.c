@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 20:40:30 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:04:14 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static size_t	ft_arr_size(char const *s, char c)
 {
-	size_t size;
+	size_t	size;
 
 	size = 0;
 	while (*s)
@@ -37,7 +37,7 @@ static size_t	ft_split_size(char const *s, char c)
 	return (delim - s);
 }
 
-static void		ft_free_arr(char **arr)
+static void	ft_free_arr(char **arr)
 {
 	size_t	i;
 
@@ -50,7 +50,7 @@ static void		ft_free_arr(char **arr)
 	free(arr);
 }
 
-static int		ft_split_str(char **arr, const char *s, char c)
+static int	ft_split_str(char **arr, const char *s, char c)
 {
 	size_t	split_size;
 
@@ -68,7 +68,7 @@ static int		ft_split_str(char **arr, const char *s, char c)
 	return (ft_split_str(arr + 1, s + split_size, c));
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char		**arr;
 	size_t		size;

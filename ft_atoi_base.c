@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/02/08 14:36:07 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2020/09/08 20:26:47 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:11:06 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_isspace(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\v' ||
+	if (c == '\t' || c == '\n' || c == '\v' || \
 			c == '\f' || c == '\r' || c == ' ')
 		return (1);
 	return (0);
@@ -28,7 +28,7 @@ static int	nbr_inbase(char c, int base)
 	(c >= 'a' && c <= ('a' + base - 10)));
 }
 
-int			ft_atoi_base(const char *str, int base)
+int	ft_atoi_base(const char *str, int base)
 {
 	int		i;
 	int		nbr;

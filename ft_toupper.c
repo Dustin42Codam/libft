@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/28 17:44:54 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/11/01 11:59:28 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/04 14:02:12 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
