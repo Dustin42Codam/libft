@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/04 14:25:13 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/03/08 20:31:06 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ void			ft_putnbr_unsigned_fd(unsigned int n, int fd);
  * Misc 
  * **/
 int				ft_atoi(const char *str);
+long			ft_atol(const char *str);
 int				ft_atoi_base(const char *str, int base);
 char			*ft_itoa(int n);
 char			*ft_utoa(unsigned int n);
