@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isdigit.c                                       :+:    :+:            */
+/*   ft_issign.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/10/29 15:21:27 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/17 16:32:36 by dkrecisz      ########   odam.nl         */
+/*   Created: 2021/03/17 16:36:00 by dkrecisz      #+#    #+#                 */
+/*   Updated: 2021/03/17 16:37:22 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+int	ft_issign(int c)
 {
-	return (c >= '0' && c <= '9');
+	return (c == '-' || c == '+');
 }
