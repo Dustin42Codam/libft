@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 20:40:30 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/04 14:04:14 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/04/15 03:00:02 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./include/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 static size_t	ft_arr_size(char const *s, char c)

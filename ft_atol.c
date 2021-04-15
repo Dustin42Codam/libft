@@ -6,11 +6,11 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/08 20:28:31 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/08 20:30:12 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/04/15 03:00:27 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/libft.h"
+#include "libft.h"
 
 long	ft_atol(const char *str)
 {

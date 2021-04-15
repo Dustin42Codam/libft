@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/03/08 20:31:06 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/04/15 02:58:43 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
 int				ft_isspace(int c);
+int				ft_issign(int c);
 
 /** 
  * String functions 
@@ -91,7 +92,7 @@ int				ft_numlen(long n);
  * **/
 t_list			*ft_lstnew(void *content);
 void			ft_lstadd_front(t_list **alst, t_list *new);
-int				ft_lstsize(t_list *lst);
+size_t			ft_lstsize(t_list *lst);
 t_list			*ft_lstlast(t_list *lst);
 void			ft_lstadd_back(t_list **alst, t_list *new);
 void			ft_lstdelone(t_list *lst, void (*del)(void *));
