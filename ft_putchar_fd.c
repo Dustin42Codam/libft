@@ -6,13 +6,14 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/04 18:00:13 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2019/11/05 11:04:54 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/10/15 22:44:51 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+ssize_t	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	return (ft_write(fd, &c, 1));
 }

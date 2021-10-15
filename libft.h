@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/04/15 02:58:43 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/10/15 22:32:05 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
@@ -51,6 +52,7 @@ char			*ft_strldup(const char *s1, size_t len);
 char			*ft_strdup(const char *s1);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			**ft_split(char const *s, char c);
+char			**ft_tokenize(char const *s, const char *delim);
 
 /** 
  * Memory manipulating functions 
@@ -68,11 +70,12 @@ void			*ft_calloc(size_t count, size_t size);
 /** 
  * Printing functions 
  * **/
-void			ft_putchar_fd(char c, int fd);
-void			ft_putstr_fd(const char *s, int fd);
-void			ft_putendl_fd(const char *s, int fd);
-void			ft_putnbr_fd(int n, int fd);
-void			ft_putnbr_unsigned_fd(unsigned int n, int fd);
+ssize_t			ft_putchar_fd(char c, int fd);
+ssize_t			ft_putstr_fd(const char *s, int fd);
+ssize_t			ft_putendl_fd(const char *s, int fd);
+ssize_t			ft_putnbr_fd(int n, int fd);
+ssize_t			ft_putnbr_unsigned_fd(unsigned int n, int fd);
+ssize_t			ft_write(int fd, const void *buf, size_t count);
 
 /** 
  * Misc 
