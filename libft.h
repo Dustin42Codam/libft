@@ -52,7 +52,6 @@ char			*ft_strldup(const char *s1, size_t len);
 char			*ft_strdup(const char *s1);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			**ft_split(char const *s, char c);
-char	**ft_split_o(char const *s, char c);
 char			**ft_tokenize(char const *s, const char *delim);
 
 /** 

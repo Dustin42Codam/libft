@@ -21,7 +21,7 @@ SRC = ft_tolower.c ft_toupper.c ft_isprint.c ft_isascii.c ft_isalpha.c \
 	  ft_substr.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c \
 	  ft_strldup.c ft_utoa.c ft_putnbr_unsigned_fd.c ft_atoi_base.c \
 	  ft_utoa_base.c ft_malloc_wrap.c ft_numlen.c ft_isspace.c \
-	  ft_atol.c ft_issign.c ft_tokenize.c ft_write.c ft_split_original.c
+	  ft_atol.c ft_issign.c ft_tokenize.c ft_write.c
 
 BSRC = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 	   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \

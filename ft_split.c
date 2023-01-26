@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split_original.c                                :+:    :+:            */
+/*   ft_split.c                                         :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
@@ -68,7 +68,7 @@ static int	ft_split_str(char **arr, const char *s, char c)
 	return (ft_split_str(arr + 1, s + split_size, c));
 }
 
-char	**ft_split_o(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char		**arr;
 	size_t		size;
