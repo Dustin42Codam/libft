@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 16:24:49 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/04/15 03:00:02 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/11/23 00:18:22 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	nb = 0;
+	if (!str)
+		return (0);
 	while (ft_isspace(str[i]))
 		i++;
 	if (str[i] == '-')

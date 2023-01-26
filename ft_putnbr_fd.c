@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/05 13:39:43 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/10/15 22:46:33 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/10/15 22:51:27 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ ssize_t	ft_putnbr_fd(int n, int fd)
 	{
 		ret += ft_putnbr_fd(nb / 10, fd);
 		c = nb % 10 + '0';
-		ret += write(fd, &c, 1);
+		ret += ft_write(fd, &c, 1);
 		return (ret);
 	}
 	return (ret);

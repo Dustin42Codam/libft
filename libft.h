@@ -6,7 +6,7 @@
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/10/29 13:10:15 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/10/15 22:32:05 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/10/25 20:39:05 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ char			*ft_strldup(const char *s1, size_t len);
 char			*ft_strdup(const char *s1);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			**ft_split(char const *s, char c);
+char	**ft_split_o(char const *s, char c);
 char			**ft_tokenize(char const *s, const char *delim);
 
 /** 

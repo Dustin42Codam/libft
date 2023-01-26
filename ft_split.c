@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_split.c                                         :+:    :+:            */
+/*   ft_split_original.c                                :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: dkrecisz <dkrecisz@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/11/08 20:40:30 by dkrecisz      #+#    #+#                 */
-/*   Updated: 2021/04/15 03:00:02 by dkrecisz      ########   odam.nl         */
+/*   Updated: 2021/10/25 20:38:35 by dkrecisz      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ static int	ft_split_str(char **arr, const char *s, char c)
 	return (ft_split_str(arr + 1, s + split_size, c));
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split_o(char const *s, char c)
 {
 	char		**arr;
 	size_t		size;
